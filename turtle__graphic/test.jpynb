@@ -1,0 +1,50 @@
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+import turtle
+import math
+pen = turtle.Turtle()
+pen.speed(10)
+pen.pensize(3)
+pen.penup()
+pen.goto(-200,-120) #begin point
+pen.pendown()
+#frontside of the house
+pen.fillcolor("#60EA6E")
+pen.begin_fill()
+for i in range(2):
+    pen.forward(150)
+    pen.left(90)
+    pen.forward(200)
+    pen.left(90)
+pen.end_fill()
+#end of frontside
+#door
+pen.forward(90)
+pen.left(90)
+pen.fillcolor("#E89E3D")
+pen.begin_fill()
+for i in range(2):
+    pen.forward(50)
+    pen.left(90)
+    pen.forward(30)
+    pen.left(90)
+pen.end_fill()
+#end of the main door
+#sideface of the house
+pen.right(90)
+pen.forward(60)
+pen.left(30)
+pen.fillcolor("#9A1837")
+pen.begin_fill()
+ac_ang = 30 #Góc nhọn
+while ac_ang < 360:
+    ac_ang += 10
+    obt_ang = 180 - ac_ang #Góc tù
+    pen.forward(90)
+    pen.left(ac_ang)
+    pen.forward(200)
+    pen.left(obt_ang)
+pen.end_fill()
+#end of sideface
+#turtle.done()
